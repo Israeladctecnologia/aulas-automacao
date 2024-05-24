@@ -50,6 +50,11 @@ while True:
     #verificar se curtida
     time.sleep(5)
     like = pyautogui.locateCenterOnScreen('image.png')
+    try:
+       like = pyautogui.screenshot('/aulas-automacao/bot_Instgram/image.png')
+    except FileNotFoundError as e:
+        print(f"Erro: {e}")
+
     if like is not None:
         sair()
         time.sleep(10)
