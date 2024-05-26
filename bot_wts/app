@@ -9,9 +9,13 @@ with open('telefones.txt','r') as arquivo:
         telefones.append(linha.split('\n') [0])
 
 for telefone in telefones:
-    webbrowser.open(f'http://api.whatsapp.com/send?phone={telefone}')
+    webbrowser.open(f'https://wa.me/{telefone}')
+    sleep(5)
+    pyautogui.hotkey('winleft''right')
+    sleep(10)
+    pyautogui.click(1017,312, duration=3)
     sleep(30)
-    pyautogui.clik(1000,200, duration=3)
+    pyautogui.click(1006,366, duration=3)
     sleep(30)
     pyautogui.typewrite('Amo você!')
     sleep(10)
